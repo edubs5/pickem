@@ -33,3 +33,20 @@ ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 ```
 By default the postgresql user is your current OS X username with no password.
+``` bash
+psql -d postgres -U {username}
+```
+
+Note:
+To start postgres manually
+``` bash
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+```
+To stop manually
+``` bash
+pg_ctl -D /usr/local/var/postgres stop -s -m fast
+```
+Check status of postgres
+``` bash
+pg_ctl -D /usr/local/var/postgres status
+```
