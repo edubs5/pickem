@@ -18,3 +18,18 @@ To list the current project gemset
 ```
 rvm gemset list
 ```
+
+##Installing PostgresSQL
+Using Brew (Mac os)
+``` bash
+brew install postgresql
+```
+Once this command is finished run
+``` bash
+# To have launchd start postgresql at login:
+ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents
+
+# Then to load postgresql now:
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+```
+By default the mysql user is root with no password.
