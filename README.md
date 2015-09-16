@@ -5,17 +5,17 @@
 ###Getting Started
 Install ruby version 2.2.3
 
-```
+``` bash
 rvm install ruby-2.2.3
 ```
 
 Create project gemset
-```
+``` bash
 rvm use 2.2.3@pickem --create
 ```
 
 To list the current project gemset
-```
+``` bash
 rvm gemset list
 ```
 
@@ -32,4 +32,4 @@ ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents
 # Then to load postgresql now:
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 ```
-By default the mysql user is root with no password.
+By default the postgresql user is your current OS X username with no password.
