@@ -28,3 +28,22 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+
+###Getting Started
+Install ruby version 2.2.3
+
+```
+rvm install ruby-2.2.3
+```
+
+Create project gemset
+```
+rvm use 2.2.3@pickem --create
+```
+
+To list the current project gemset
+```
+rvm gemset list
+```
