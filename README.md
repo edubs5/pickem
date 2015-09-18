@@ -37,7 +37,7 @@ By default the postgresql user is your current OS X username with no password.
 psql -d postgres -U {username}
 ```
 
-Note:
+PostresSQL Notes:
 To start postgres manually
 ``` bash
 pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
@@ -50,3 +50,21 @@ Check status of postgres
 ``` bash
 pg_ctl -D /usr/local/var/postgres status
 ```
+
+## Rspec
+
+To run all specs:
+
+    bundle exec rspec
+
+To specify specific folders:
+
+    bundle exec rspec <__PATH__>/<FILE_NAME>
+    ie.. bundle exec rspec spec/models/user_spec.rb
+
+
+To run a specific spec in a file:
+
+    bundle exec rspec <__PATH__>/<__FILE_NAME__>:<__ROW__>
+
+    ie.. bundle exec rspec spec/models/user_spec.rb:18
