@@ -2,7 +2,18 @@
 
 [![Join the chat at https://gitter.im/elmerwu/pickem](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/elmerwu/pickem?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-###Getting Started
+###Getting Started in a OSX environment
+
+Clone the repo.  Make sure you install Node and bower before running bundle install.
+Run the server with
+
+    rails s
+
+Visit this url to see the app on your local machine:
+
+    localhost:3000
+
+
 Install ruby version 2.2.3
 
 ``` bash
@@ -50,6 +61,33 @@ Check status of postgres
 ``` bash
 pg_ctl -D /usr/local/var/postgres status
 ```
+
+# For AngularJS front end
+
+## Install NodeJS first
+
+    brew install node
+
+then install bower
+
+    npm install -g bower
+
+You need to have both NodeJS and bower installed in order to install the 'bower-rails' gem
+
+After bower is installed you can see the rake tasks you now have
+
+    rake -T bower
+
+Bower uses the Bowerfile to manage dependencies, similar to the Gemfile in the root directory of the app.
+
+Install Angular:
+
+    rake bower:install
+
+The bower dependencies are in this folder:
+
+    vendor/assets/bower_components
+
 
 ## Rspec
 
