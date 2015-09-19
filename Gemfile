@@ -9,6 +9,12 @@ gem 'pg', '0.18.3'
 # connects rails with bower
 gem 'bower-rails', '0.10.0'
 
+# jquery for rails
+gem 'jquery-rails', '4.0.5'
+
+# coffee for rails
+gem 'coffee-rails', '4.1.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'byebug'
