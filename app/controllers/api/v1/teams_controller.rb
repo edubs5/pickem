@@ -12,22 +12,22 @@ class Api::V1::TeamsController < Api::V1::BaseController
     if team.save
       render json: team
     else
-      render json: {error: "Internal Server Error"},
-                    status: :internal_server_error
+      render json: { error: "Internal Server Error" },
+      status: :internal_server_error
     end
   end
 
   private
 
-    def teams
-      @teams ||= Team.all
-    end
+  def teams
+    @teams ||= Team.all
+  end
 
-    def team
-      @team ||= teams.find(params[:id])
-    end
+  def team
+    @team ||= teams.find(params[:id])
+  end
 
-    def teams_params
-      params.permit(:name)
-    end
+  def teams_params
+    params.permit(:name)
+  end
 end
