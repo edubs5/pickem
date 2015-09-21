@@ -14,7 +14,7 @@ class Api::V1::TeamsController < Api::V1::BaseController
     if team.save
       render json: team
     else
-      render json: { error: 'Internal Server Error'},
+      render json: { error: "Internal Server Error"},
                     status: :internal_server_error
     end
   end
@@ -32,4 +32,3 @@ class Api::V1::TeamsController < Api::V1::BaseController
       params.permit(:name)
     end
 end
-
