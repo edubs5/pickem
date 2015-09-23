@@ -15,6 +15,15 @@ gem 'jquery-rails', '4.0.5'
 # coffee for rails
 gem 'coffee-rails', '4.1.0'
 
+# bootstrap
+gem 'sass-rails', '5.0.4'
+gem 'bootstrap-sass', '3.3.5.1'
+gem 'autoprefixer-rails', '6.0.3'
+gem 'font-awesome-sass', '4.4.0'
+
+# angular templates
+gem 'angular-rails-templates', '0.2.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'byebug'
