@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   end
 
   # Catch all (Serve frontend)
-  get "*path", to: "home#index"
-  root "home#index"
+  get "*path", to: "application#index"
+  root 'application#index'
 end

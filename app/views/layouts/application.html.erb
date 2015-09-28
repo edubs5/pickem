@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Pickem</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en" ng-app="pickemApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Pickem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <base href="/">
 
-<%= yield %>
-
-</body>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <%= render "layouts/shared/navigation" %>
+    <!-- MAIN CONTENT -->
+    <main class="main" role="main">
+      <div class="container">
+        <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT -->
+        <div ui-view></div>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <%= render "layouts/shared/footer" %>
+    <%= javascript_include_tag 'application' %>
+  </body>
 </html>

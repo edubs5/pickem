@@ -1,2 +1,0 @@
-test = angular.module('test',[
-])

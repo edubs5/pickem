@@ -1,0 +1,18 @@
+<h1> NFL teams </h1>
+
+<table class="table table-hover table-striped table-bordered">
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-class="{'success': team.id == 1}" ng-repeat="team in teams">
+      <td>{{ team.id }}</td>
+      <td>{{ team.name }}</td>
+      <td type="button" class="btn btn-danger btn-xs text-center" ng-click="destroyTeam(team, $event); $event.stopPropagation()"><i class="fa fa-times"></i> Delete</td>
+    </tr>
+  </tbody>
+</table>
