@@ -1,6 +1,6 @@
 # README
 
-[![Join the chat at https://gitter.im/elmerwu/pickem](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/elmerwu/pickem?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/edubs5/pickem](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/elmerwu/pickem?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ###Getting Started in a OSX environment
 
@@ -106,3 +106,15 @@ To run a specific spec in a file:
     bundle exec rspec <__PATH__>/<__FILE_NAME__>:<__ROW__>
 
     ie.. bundle exec rspec spec/models/user_spec.rb:18
+
+## Heroku Deployment
+
+Heroku deploys only the master branch:
+
+    git push heroku master
+
+but if you want to test your local branch before making a pull request
+you can do this to deploy your local branch:
+
+    git push heroku <LOCAL_BRANCH_NAME>:master
+
