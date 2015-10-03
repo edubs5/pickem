@@ -5212,24 +5212,6 @@ var $AnimateProvider = ['$provide', function($provide) {
         return $$animateQueue.push(element, 'enter', prepareAnimateOptions(options));
       },
 
-      /**
-       *
-       * @ngdoc method
-       * @name $animate#move
-       * @kind function
-       * @description Inserts (moves) the element into its new position in the DOM either after
-       *   the `after` element (if provided) or as the first child within the `parent` element
-       *   and then triggers an animation. A promise is returned that will be resolved
-       *   during the next digest once the animation has completed.
-       *
-       * @param {DOMElement} element the element which will be moved into the new DOM position
-       * @param {DOMElement} parent the parent element which will append the element as
-       *   a child (so long as the after element is not present)
-       * @param {DOMElement=} after the sibling element after which the element will be appended
-       * @param {object=} options an optional collection of options/styles that will be applied to the element
-       *
-       * @return {Promise} the animation callback promise
-       */
       move: function(element, parent, after, options) {
         parent = parent && jqLite(parent);
         after = after && jqLite(after);
